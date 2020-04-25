@@ -22,12 +22,8 @@ def createPath(n):
     # we start a the 0,0 block
     path.append(0)
     for i in range(1,n):
-        while True:
-            number = random.randrange(n)
-
-            if number not in path:
-                path.append(number)
-                break
+        path.append(i)
+    random.shuffle(path[1:])
     return path
 
 # the 2d distance of 2 points
